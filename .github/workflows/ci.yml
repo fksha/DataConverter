@@ -9,9 +9,10 @@ jobs:
   build-and-test:
     name: Build and test (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
-
+    #false - выполняться все задания, даже если есть ошибка в другом
+    #true - выполнение ещ1 работающих заданий матрицы отменяется, если одно из заданий завершается ошибкой
     strategy:
-      fail-fast: true
+      fail-fast: true 
       matrix:
         os:
           - ubuntu-latest

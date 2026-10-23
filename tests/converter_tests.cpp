@@ -72,3 +72,7 @@ TEST(Converter, EmptyCsvProducesEmptyArray) {
     EXPECT_TRUE(result.is_array());
     EXPECT_TRUE(result.empty());
 }
+
+TEST(CIExperiment, IntentionalFailure) {
+    EXPECT_EQ(1, 2);
+}
